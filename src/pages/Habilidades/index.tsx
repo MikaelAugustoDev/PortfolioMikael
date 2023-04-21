@@ -64,4 +64,8 @@ const Main = styled.main`
     gap: 5px;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 375px) {
+        padding: 50px 0px
+    }
 `
