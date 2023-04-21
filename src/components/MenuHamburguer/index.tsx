@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom"
 import ButtonTheme from '../ButtonTheme';
@@ -7,11 +7,24 @@ import { ThemeContext } from '../../contexts';
 const HamburguerMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const { theme }: any = useContext(ThemeContext)
 
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
+    setIsMenuOpen(!isMenuOpen)
   };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      // Desabilitar o scroll da página
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Habilitar o scroll da página
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMenuOpen]);
 
   return (
     <>
@@ -20,7 +33,7 @@ const HamburguerMenu: React.FC = () => {
         <span style={{ background: theme.texto }}></span>
         <span style={{ background: theme.texto }}></span>
       </HamburguerIcon>
-      <MenuWrapper style={{ background: theme.fundo }} isOpen={isOpen}>
+      <MenuWrapper  style={{ background: theme.fundo }} isOpen={isOpen}>
         <MenuItems>
 
           <ButtonTheme />
