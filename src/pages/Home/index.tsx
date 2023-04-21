@@ -62,6 +62,17 @@ const Photo = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     background-color: #2C3E50;
+
+    @media (max-width: 768px) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    @media (max-width: 425px) {
+        width: 300px;
+        height: 300px;
+
+    }
 `
 
 const Animacao = styled(TypeAnimation)`
@@ -118,7 +129,7 @@ const Text = styled.h3`
 
 const DivTexts = styled.div`
     width: 50%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,11 +139,12 @@ const DivTexts = styled.div`
         height: 50%;
         align-items: center;
         text-align: justify;
+        margin-bottom: 50px;
     }
 `
 const DivPhoto = styled.div`
     width: 50%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,7 +157,7 @@ const DivPhoto = styled.div`
 
 const Main = styled.main`
     width: 100%;
-    height: 88vh;
+    min-height: 88vh;
     transition: 0.5s ease-in-out;
     display: flex;
 

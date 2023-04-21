@@ -4,7 +4,7 @@ import { ThemeContext } from "../../contexts"
 import styled from "styled-components"
 import { Footer } from "../../components/Footer"
 import { Link } from "react-router-dom"
-
+import Curriculo from "../../assets/CurriculoMikael.pdf"
 
 const Sobre = () => {
     
@@ -24,7 +24,7 @@ const Sobre = () => {
                     
                     <SobreMim style={{ color: theme.texto }}>Prazer, me chamo Mikael e tenho 21 anos de idade, sou apaixonado pela área de TI e atualmente sou Desenvolvedor Web Frontend com algumas noções de Backend, comecei meus estudos na trila da Rocketseat, onde tive noções básicas de como é a carreira de desenvolvimento web e logo após investi a fundo em um curso em alta no mercado de desenvolvedores fullstack chamado DevQuest, e foi então que aprimorei meus conhecimentos na programação frontend e parti para aprender também o backend, pretendo futuramente me tornar um bom desenvolvedor Fullstack, aprender desenvolvimento mobile e após isso aprender então a programação de games, já tenho alguns <A style={{ color: theme.destaque }} to="/projetos">projetos pessoais</A> e alguns trabalhos que fiz como freelancer, segue meu currículo abaixo !</SobreMim>
 
-                    <Button style={{ background: theme.destaque }}>Baixar CV</Button>
+                    <Baixar download href={Curriculo}><Button style={{ background: theme.destaque }}>Baixar CV</Button></Baixar>
 
                 </DivSobre>
 
@@ -39,6 +39,10 @@ const Sobre = () => {
 } 
 
 export { Sobre }
+
+const Baixar = styled.a`
+    text-decoration: none;
+`
 
 const A = styled(Link)`
     text-decoration: none;
