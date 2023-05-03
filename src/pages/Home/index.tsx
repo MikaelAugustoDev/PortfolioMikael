@@ -34,11 +34,13 @@ const Home = () => {
                         sequence={[
                             'Desenvolvedor Frontend',
                             1000,
-                            'Estudante Backend',
+                            'Desenvolvedor Backend',
+                            1000,
+                            'Desenvolvedor Fullstack',
                             1000,
                         ]}
                         speed={1}
-                        repeat={Infinity}
+                        repeat={0}
                     />
 
                 </DivTexts>

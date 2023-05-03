@@ -2,8 +2,23 @@ import { HeaderPage } from "../../components/Header"
 import styled from "styled-components"
 import { ThemeContext } from "../../contexts"
 import { useContext } from "react"
-import SkillProgressCircle from "../../components/ProgressSkill"
 import { Footer } from "../../components/Footer"
+import { CardHabilite } from "../../components/CardHabilidades"
+import ReactLogo from "../../assets/react-svgrepo-com.svg"
+import ReduxLogo from "../../assets/redux-svgrepo-com (2).svg"
+import SCLogo from "../../assets/styled-components-svgrepo-com.svg"
+import TSLogo from "../../assets/typescript-icon-svgrepo-com.svg"
+import JSLogo from "../../assets/javascript-svgrepo-com (1).svg"
+import NodeLogo from "../../assets/nodejs02-svgrepo-com.svg"
+import JestLogo from "../../assets/jest-svgrepo-com.svg"
+import MUILogo from "../../assets/material-ui-svgrepo-com.svg"
+import PSQLLogo from "../../assets/postgresql-svgrepo-com.svg"
+import MSQLLogo from "../../assets/mysql-svgrepo-com.svg"
+import SassLogo from "../../assets/sass-svgrepo-com.svg"
+import CSSLogo from "../../assets/css3-02-svgrepo-com.svg"
+import HTMLLogo from "../../assets/html-124-svgrepo-com.svg"
+import HanLogo from "../../assets/handlebars-svgrepo-com.svg"
+
 
 const Habilidades = () => {
 
@@ -19,24 +34,79 @@ const Habilidades = () => {
 
             <Main style={{ background: theme.fundo }}>
 
-                <SkillProgressCircle skillName="React" progress={85} />
-                <SkillProgressCircle skillName="Styled Components" progress={97} />
-                <SkillProgressCircle skillName="Typescript" progress={80} />
-                <SkillProgressCircle skillName="Redux" progress={70} />
-                <SkillProgressCircle skillName="ContexAPI" progress={95} />
-                <SkillProgressCircle skillName="MaterialUI" progress={99} />
-                <SkillProgressCircle skillName="Jest" progress={60} />
-                <SkillProgressCircle skillName="HTML" progress={99} />
-                <SkillProgressCircle skillName="CSS" progress={95} />
-                <SkillProgressCircle skillName="Sass" progress={95} />
-                <SkillProgressCircle skillName="Javascript" progress={90} />
-                <SkillProgressCircle skillName="Regex" progress={95} />
-                <SkillProgressCircle skillName="PostgreSQL" progress={50} />
-                <SkillProgressCircle skillName="NodeJS" progress={30} />
+                <CardHabilite
+                    img={ReactLogo}
+                    name="React"
+                />
+
+                <CardHabilite
+                    img={ReduxLogo}
+                    name="Redux"
+                />
+
+                <CardHabilite
+                    img={MUILogo}
+                    name="Material UI"
+                />
+
+                <CardHabilite
+                    img={SCLogo}
+                    name="Styled Component"
+                />
+
+                <CardHabilite
+                    img={TSLogo}
+                    name="Typescript"
+                />
+
+                <CardHabilite
+                    img={JSLogo}
+                    name="Javascript"
+                />
+
+                <CardHabilite
+                    img={NodeLogo}
+                    name="NodeJS"
+                />
+
+                <CardHabilite
+                    img={JestLogo}
+                    name="JEST"
+                />
+
+                <CardHabilite
+                    img={PSQLLogo}
+                    name="PostgreSQL"
+                />
+
+                <CardHabilite
+                    img={MSQLLogo}
+                    name="MySQL"
+                />
+
+                <CardHabilite
+                    img={SassLogo}
+                    name="SASS"
+                />
+
+                <CardHabilite
+                    img={CSSLogo}
+                    name="CSS"
+                />
+
+                <CardHabilite
+                    img={HTMLLogo}
+                    name="HTML"
+                />
+
+                <CardHabilite
+                    img={HanLogo}
+                    name="Handlebars"
+                />
 
             </Main>
 
-            <Footer/>
+            <Footer />
 
         </>
 
